@@ -5,15 +5,17 @@
  */
 package com.alfomarina.services;
 
+import com.alfomarina.models.Administrador;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
 /**
  *
  * @author Admin
- * @param <T>
  */
-public interface BaseService<T> {
-
-     T create(T t);
-     T getOne(Integer id);
-     T update(Integer id);
-    
+@Service
+public interface IAdministradorService<T> extends BaseService<Administrador>{
+   void eliminarTeamMade(Integer id);
+   
 }

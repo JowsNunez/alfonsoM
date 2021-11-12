@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alfomarina.services;
+package com.alfomarina.helpers;
 
 /**
  *
  * @author Admin
- * @param <T>
  */
-public interface BaseService<T> {
-
-     T create(T t);
-     T getOne(Integer id);
-     T update(Integer id);
-    
+public enum Estrella {
+     ZERO,ONE,TWO,THREE,FOUR,FIVE
 }

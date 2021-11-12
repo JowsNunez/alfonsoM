@@ -4,20 +4,25 @@
  * and open the template in the editor.
  */
 package com.alfomarina.repositories;
+
+import com.alfomarina.models.Rating;
 import com.alfomarina.models.TeamMade;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
 /**
  *
  * @author Admin
  */
-        
-// REPOOOOOOO
 @Repository
-public interface TeamMadeRepository extends JpaRepository<TeamMade, Integer> {
-    
-    @Query("select u from TeamMade u where u.idTeamMade = ?#{[0]}")
-    TeamMade findUsersByAge(Integer idTeamMade);
-    
+public interface RatingRepository extends JpaRepository<Rating, Integer> {
+
+     @Query(nativeQuery = true,value = "select * from Rating u where u.idRating = :identity")
+     Rating findRatingBya(@Param("identity") Integer idRating);
+
 }

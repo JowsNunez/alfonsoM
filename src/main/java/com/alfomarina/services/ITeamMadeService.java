@@ -5,15 +5,15 @@
  */
 package com.alfomarina.services;
 
+import org.springframework.stereotype.Service;
+import com.alfomarina.models.TeamMade;
 /**
  *
  * @author Admin
- * @param <T>
  */
-public interface BaseService<T> {
 
-     T create(T t);
-     T getOne(Integer id);
-     T update(Integer id);
-    
+
+@Service
+public interface ITeamMadeService extends BaseService<TeamMade>  {
+   
 }

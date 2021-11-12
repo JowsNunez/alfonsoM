@@ -1,6 +1,6 @@
 package com.alfomarina.main;
 
-import org.graalvm.compiler.serviceprovider.ServiceProvider;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
